@@ -50,3 +50,4 @@ assert(false) on anything works like = `this should not happen`
 assert(true) = ????
 
 
+#### FUZZING MATHS
