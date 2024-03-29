@@ -20,7 +20,7 @@ You can use this if the contract doesn't need some initialization condition ( wh
 Use external calls only- Like how we use while using Foundry, create an instance of contract an work on it.
 You can perfom contract initializations through it
 
-`Something to note here - Ecidna doesn't runs it's test on the contracts, rather it runs it test on the test contract which may or may not inherit the system state(the contract with properties).`
+`Something to note here - Echidna doesn't runs it's test on the contracts, rather it runs it test on the test contract which may or may not inherit the system state(the contract with properties).`
 
 This means that you might run into a problem where you will only be able to run only those methods that are defined and not other ones (you could check that by checking coverage report)
 
@@ -32,4 +32,21 @@ We just assert some value within the function
 
     Do not force any side effects during the assertion checking. For instance: assert(ChangeStateAndReturn() == 1)
     Do not assert obvious statements. For instance assert(var >= 0) where var is declared as uint256.
+
+
+PLAYLIST
+Echidna needs 2 things , target contract and properties to test. 
+Think of echinda is an EOA that just very fast transactions 
+
+
+ex 1 - check for correct arithmetic 
+ex 2 - check for access control
+
+Notice how my solutions are a little bit different from the provided solution (I have use if else) because that is the way I have understood the given invariant.
+
+At ex2 we were made to understand `assertion testing`. I think it's a good one, we don't need any needless logic like before
+
+assert(false) on anything works like = `this should not happen`
+assert(true) = ????
+
 
